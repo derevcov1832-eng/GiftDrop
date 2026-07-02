@@ -3,29 +3,82 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GiftDrop</title>
+    <title>Rabbits</title>
     <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
 
-    <!-- ОСНОВНОЙ КОНТЕЙНЕР -->
     <div id="app">
-        <!-- Сюда будет загружаться содержимое страниц -->
-        <div id="content"></div>
+        <!-- ВЕРХНЯЯ ПАНЕЛЬ -->
+        <header id="header">
+            <div class="logo">🐰 Rabbits</div>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-label">LIVE</span>
+                    <span class="stat-value">2</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">₽</span>
+                    <span class="stat-value">0.2</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Free</span>
+                    <span class="stat-value">case</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- КОНТЕНТ -->
+        <div id="content">
+            <div class="case-section">
+                <h2>🎁 Кейс за депозит</h2>
+                <div class="case-grid">
+                    <div class="case-card" onclick="alert('📦 Открываем кейс!')">
+                        <div class="case-icon">📦</div>
+                        <div class="case-name">Стандартный</div>
+                        <button class="case-btn">ИГРАТЬ!</button>
+                    </div>
+                    <div class="case-card rare" onclick="alert('⭐ Редкий кейс!')">
+                        <div class="case-icon">⭐</div>
+                        <div class="case-name">Редкий</div>
+                        <button class="case-btn">ИГРАТЬ!</button>
+                    </div>
+                    <div class="case-card legendary" onclick="alert('🔥 Легендарный кейс!')">
+                        <div class="case-icon">🔥</div>
+                        <div class="case-name">Легендарный</div>
+                        <button class="case-btn">ИГРАТЬ!</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ТОП -->
+            <div class="top-section">
+                <h2>🏆 Топ</h2>
+                <div class="top-list">
+                    <div class="top-item">1. Игрок_1 — 150 NFT</div>
+                    <div class="top-item">2. Игрок_2 — 120 NFT</div>
+                    <div class="top-item">3. Игрок_3 — 90 NFT</div>
+                </div>
+            </div>
+        </div>
 
         <!-- НИЖНЯЯ НАВИГАЦИЯ -->
         <nav id="navbar">
-            <div class="nav-item active" data-page="home">
-                <span class="nav-icon">🏠</span>
-                <span class="nav-label">Home</span>
+            <div class="nav-item active" data-page="top">
+                <span class="nav-icon">🏆</span>
+                <span class="nav-label">Топ</span>
             </div>
-            <div class="nav-item" data-page="games">
-                <span class="nav-icon">🎮</span>
-                <span class="nav-label">Games</span>
+            <div class="nav-item" data-page="home">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Главная</span>
+            </div>
+            <div class="nav-item" data-page="rabbit">
+                <span class="nav-icon">🐰</span>
+                <span class="nav-label">Rabbit</span>
             </div>
             <div class="nav-item" data-page="profile">
                 <span class="nav-icon">👤</span>
-                <span class="nav-label">Profile</span>
+                <span class="nav-label">Профиль</span>
             </div>
         </nav>
     </div>
