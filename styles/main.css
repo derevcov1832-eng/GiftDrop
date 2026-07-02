@@ -7,7 +7,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: #0a0a0f;
+    background: #07070d;
     color: #ffffff;
     height: 100vh;
     overflow: hidden;
@@ -19,32 +19,214 @@ body {
     height: 100vh;
     max-width: 430px;
     margin: 0 auto;
-    background: #0f0f1a;
+    background: radial-gradient(ellipse at 50% 0%, #1a0a2e, #0a0a12);
     position: relative;
 }
 
-/* ===== КОНТЕНТ СТРАНИЦ ===== */
+/* ===== ВЕРХНЯЯ ПАНЕЛЬ ===== */
+#header {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 14px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #f472b6, #a78bfa, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+
+.stats-bar {
+    display: flex;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 6px 16px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+}
+
+.stat-label {
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 500;
+}
+
+.stat-value {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* ===== КОНТЕНТ ===== */
 #content {
     flex: 1;
     overflow-y: auto;
-    padding: 20px 16px 80px 16px;
+    padding: 20px 18px 90px 18px;
     scroll-behavior: smooth;
+}
+
+#content::-webkit-scrollbar {
+    width: 0;
+}
+
+/* ===== КЕЙСЫ ===== */
+.case-section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+}
+
+.case-grid {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding: 4px 0 16px 0;
+}
+
+.case-grid::-webkit-scrollbar {
+    height: 0;
+}
+
+.case-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 24px 18px;
+    min-width: 130px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    flex: 1;
+}
+
+.case-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    border-color: rgba(167, 139, 250, 0.3);
+    box-shadow: 0 20px 60px rgba(167, 139, 250, 0.15);
+}
+
+.case-card.rare {
+    border-color: rgba(251, 191, 36, 0.3);
+}
+
+.case-card.rare:hover {
+    border-color: rgba(251, 191, 36, 0.6);
+    box-shadow: 0 20px 60px rgba(251, 191, 36, 0.15);
+}
+
+.case-card.legendary {
+    border-color: rgba(244, 114, 182, 0.3);
+}
+
+.case-card.legendary:hover {
+    border-color: rgba(244, 114, 182, 0.6);
+    box-shadow: 0 20px 60px rgba(244, 114, 182, 0.15);
+}
+
+.case-icon {
+    font-size: 44px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.case-name {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.case-btn {
+    background: linear-gradient(135deg, #a78bfa, #7c3aed);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.case-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(167, 139, 250, 0.3);
+}
+
+/* ===== ТОП ===== */
+.top-section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.top-list {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 6px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.top-item {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-item:last-child {
+    border-bottom: none;
+}
+
+.top-item span {
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 400;
 }
 
 /* ===== НИЖНЯЯ НАВИГАЦИЯ ===== */
 #navbar {
     display: flex;
-    background: #1a1a2e;
-    border-top: 1px solid #2a2a4a;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    max-width: 430px;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    max-width: 406px;
     margin: 0 auto;
-    padding: 8px 0;
+    padding: 6px 8px;
     justify-content: space-around;
     z-index: 100;
+    border-radius: 30px;
+    background: rgba(15, 15, 30, 0.85);
 }
 
 .nav-item {
@@ -52,343 +234,33 @@ body {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    padding: 4px 20px;
+    padding: 8px 16px;
     transition: all 0.3s ease;
-    opacity: 0.5;
+    opacity: 0.4;
+    border-radius: 20px;
 }
 
 .nav-item.active {
     opacity: 1;
+    background: rgba(167, 139, 250, 0.12);
 }
 
 .nav-item .nav-icon {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 2px;
 }
 
 .nav-item .nav-label {
-    font-size: 11px;
-    font-weight: 500;
-    color: #8888aa;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.3px;
 }
 
 .nav-item.active .nav-label {
-    color: #8B5CF6;
+    color: #a78bfa;
 }
 
-/* ===== КАРТОЧКИ ИГР ===== */
-.game-card {
-    background: linear-gradient(145deg, #1a1a2e, #12121f);
-    border: 1px solid #2a2a4a;
-    border-radius: 16px;
-    padding: 20px;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.game-card:hover {
-    border-color: #8B5CF6;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.15);
-}
-
-.game-card .icon {
-    font-size: 40px;
-    width: 60px;
-    height: 60px;
-    background: #1f1f3a;
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.game-card .info {
-    flex: 1;
-}
-
-.game-card .info h3 {
-    font-size: 17px;
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-
-.game-card .info p {
-    font-size: 13px;
-    color: #8888aa;
-}
-
-/* ===== ГЛАВНАЯ СТРАНИЦА ===== */
-.welcome {
-    text-align: center;
-    padding: 20px 0;
-}
-
-.welcome h1 {
-    font-size: 28px;
-    background: linear-gradient(135deg, #8B5CF6, #6D28D9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.balance-card {
-    background: linear-gradient(135deg, #1f1f3a, #2a1a4a);
-    border-radius: 16px;
-    padding: 24px;
-    text-align: center;
-    margin: 20px 0;
-    border: 1px solid #3a2a5a;
-}
-
-.balance-card .amount {
-    font-size: 36px;
-    font-weight: 700;
-    color: #8B5CF6;
-}
-
-.balance-card .label {
-    font-size: 14px;
-    color: #8888aa;
-}
-
-.bonus-btn {
-    background: linear-gradient(135deg, #8B5CF6, #6D28D9);
-    color: white;
-    border: none;
-    padding: 14px 32px;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    width: 100%;
-    transition: all 0.3s ease;
-}
-
-.bonus-btn:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
-}
-
-/* ===== ПРОФИЛЬ ===== */
-.profile-header {
-    text-align: center;
-    padding: 20px 0;
-}
-
-.profile-header .avatar {
-    font-size: 72px;
-    margin-bottom: 10px;
-}
-
-.profile-header .name {
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.profile-header .nick {
-    font-size: 14px;
-    color: #8888aa;
-}
-
-.stats {
-    display: flex;
-    justify-content: space-around;
-    background: #1a1a2e;
-    border-radius: 16px;
-    padding: 16px;
-    margin: 16px 0;
-}
-
-.stats .stat {
-    text-align: center;
-}
-
-.stats .stat .number {
-    font-size: 22px;
-    font-weight: 700;
-    color: #8B5CF6;
-}
-
-.stats .stat .label {
-    font-size: 12px;
-    color: #8888aa;
-}
-
-.nft-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 12px;
-}
-
-.nft-item {
-    background: #1a1a2e;
-    border-radius: 12px;
-    padding: 12px;
-    text-align: center;
-    flex: 1 0 calc(33% - 10px);
-    border: 1px solid #2a2a4a;
-}
-
-.nft-item .nft-icon {
-    font-size: 32px;
-}
-
-.nft-item .nft-name {
-    font-size: 12px;
-    margin-top: 4px;
-}
-
-.nft-item.rare {
-    border-color: #f59e0b;
-}
-
-.nft-item.legendary {
-    border-color: #ef4444;
-}
-/* ===== ВЕРХНЯЯ ПАНЕЛЬ ===== */
-#header {
-    background: linear-gradient(135deg, #1a1a2e, #2a1a4a);
-    padding: 12px 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #3a2a5a;
-    position: sticky;
-    top: 0;
-    z-index: 50;
-}
-
-.logo {
-    font-size: 18px;
-    font-weight: 700;
-    color: #8B5CF6;
-}
-
-.stats-bar {
-    display: flex;
-    gap: 12px;
-    background: #0f0f1a;
-    padding: 6px 14px;
-    border-radius: 20px;
-    border: 1px solid #2a2a4a;
-}
-
-.stat-item {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 13px;
-}
-
-.stat-label {
-    color: #8888aa;
-}
-
-.stat-value {
-    color: #ffffff;
-    font-weight: 600;
-}
-
-/* ===== КЕЙСЫ ===== */
-.case-section {
-    padding: 16px 0;
-}
-
-.case-section h2 {
-    font-size: 18px;
-    margin-bottom: 16px;
-    color: #ffffff;
-}
-
-.case-grid {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    padding: 4px 0 12px 0;
-}
-
-.case-card {
-    background: #1a1a2e;
-    border: 1px solid #2a2a4a;
-    border-radius: 16px;
-    padding: 20px 16px;
-    min-width: 120px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    flex: 1;
-}
-
-.case-card:hover {
-    transform: translateY(-4px);
-    border-color: #8B5CF6;
-}
-
-.case-card.rare {
-    border-color: #f59e0b;
-}
-
-.case-card.legendary {
-    border-color: #ef4444;
-}
-
-.case-icon {
-    font-size: 40px;
-    margin-bottom: 8px;
-}
-
-.case-name {
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 8px;
-}
-
-.case-btn {
-    background: linear-gradient(135deg, #8B5CF6, #6D28D9);
-    color: white;
-    border: none;
-    padding: 6px 16px;
-    border-radius: 8px;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.case-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
-}
-
-/* ===== ТОП ===== */
-.top-section {
-    padding: 16px 0;
-}
-
-.top-section h2 {
-    font-size: 18px;
-    margin-bottom: 12px;
-}
-
-.top-list {
-    background: #1a1a2e;
-    border-radius: 12px;
-    padding: 12px 16px;
-    border: 1px solid #2a2a4a;
-}
-
-.top-item {
-    padding: 8px 0;
-    border-bottom: 1px solid #2a2a4a;
-    color: #ccccdd;
-    font-size: 14px;
-}
-
-.top-item:last-child {
-    border-bottom: none;
+.nav-item:hover {
+    opacity: 0.8;
 }
