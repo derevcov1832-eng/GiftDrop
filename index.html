@@ -31,20 +31,38 @@
         <!-- КОНТЕНТ -->
         <div id="content">
             <div class="case-section">
-                <h2>🎁 Кейс за депозит</h2>
+                <h2>Кейс за депозит</h2>
                 <div class="case-grid">
                     <div class="case-card" onclick="alert('📦 Открываем стандартный кейс!')">
-                        <div class="case-icon">📦</div>
+                        <div class="case-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
+                            </svg>
+                        </div>
                         <div class="case-name">Стандартный</div>
                         <button class="case-btn">ИГРАТЬ!</button>
                     </div>
                     <div class="case-card rare" onclick="alert('⭐ Открываем редкий кейс!')">
-                        <div class="case-icon">⭐</div>
+                        <div class="case-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                        </div>
                         <div class="case-name">Редкий</div>
                         <button class="case-btn">ИГРАТЬ!</button>
                     </div>
                     <div class="case-card legendary" onclick="alert('🔥 Открываем легендарный кейс!')">
-                        <div class="case-icon">🔥</div>
+                        <div class="case-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L13.09 8.26L20 9.27L15 14.14L16.18 21.02L12 17.77L7.82 21.02L9 14.14L4 9.27L10.91 8.26L12 2Z"/>
+                                <path d="M12 2L12 5"/>
+                                <path d="M12 17.77L12 21"/>
+                                <path d="M9 8L6 10"/>
+                                <path d="M18 10L15 8"/>
+                            </svg>
+                        </div>
                         <div class="case-name">Легендарный</div>
                         <button class="case-btn">ИГРАТЬ!</button>
                     </div>
@@ -53,7 +71,7 @@
 
             <!-- ТОП -->
             <div class="top-section">
-                <h2>🏆 Топ</h2>
+                <h2>Топ игроков</h2>
                 <div class="top-list">
                     <div class="top-item">1. Игрок_1 — 150 NFT</div>
                     <div class="top-item">2. Игрок_2 — 120 NFT</div>
@@ -62,18 +80,33 @@
             </div>
         </div>
 
-        <!-- НИЖНЯЯ НАВИГАЦИЯ (3 КНОПКИ) -->
+        <!-- НИЖНЯЯ НАВИГАЦИЯ -->
         <nav id="navbar">
             <div class="nav-item active" data-page="top">
-                <span class="nav-icon">🏆</span>
+                <span class="nav-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                </span>
                 <span class="nav-label">Топ</span>
             </div>
             <div class="nav-item" data-page="home">
-                <span class="nav-icon">🏠</span>
+                <span class="nav-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 12L12 3L21 12"/>
+                        <path d="M5 10V20H19V10"/>
+                        <path d="M9 20V14H15V20"/>
+                    </svg>
+                </span>
                 <span class="nav-label">Главная</span>
             </div>
             <div class="nav-item" data-page="profile">
-                <span class="nav-icon">👤</span>
+                <span class="nav-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </span>
                 <span class="nav-label">Профиль</span>
             </div>
         </nav>
