@@ -250,3 +250,145 @@ body {
 .nft-item.legendary {
     border-color: #ef4444;
 }
+/* ===== ВЕРХНЯЯ ПАНЕЛЬ ===== */
+#header {
+    background: linear-gradient(135deg, #1a1a2e, #2a1a4a);
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3a2a5a;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #8B5CF6;
+}
+
+.stats-bar {
+    display: flex;
+    gap: 12px;
+    background: #0f0f1a;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #2a2a4a;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+}
+
+.stat-label {
+    color: #8888aa;
+}
+
+.stat-value {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* ===== КЕЙСЫ ===== */
+.case-section {
+    padding: 16px 0;
+}
+
+.case-section h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.case-grid {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 4px 0 12px 0;
+}
+
+.case-card {
+    background: #1a1a2e;
+    border: 1px solid #2a2a4a;
+    border-radius: 16px;
+    padding: 20px 16px;
+    min-width: 120px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.case-card:hover {
+    transform: translateY(-4px);
+    border-color: #8B5CF6;
+}
+
+.case-card.rare {
+    border-color: #f59e0b;
+}
+
+.case-card.legendary {
+    border-color: #ef4444;
+}
+
+.case-icon {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.case-name {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.case-btn {
+    background: linear-gradient(135deg, #8B5CF6, #6D28D9);
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.case-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+/* ===== ТОП ===== */
+.top-section {
+    padding: 16px 0;
+}
+
+.top-section h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.top-list {
+    background: #1a1a2e;
+    border-radius: 12px;
+    padding: 12px 16px;
+    border: 1px solid #2a2a4a;
+}
+
+.top-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #2a2a4a;
+    color: #ccccdd;
+    font-size: 14px;
+}
+
+.top-item:last-child {
+    border-bottom: none;
+}
