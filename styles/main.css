@@ -269,3 +269,60 @@ body {
 .nav-item:hover {
     opacity: 0.8;
 }
+/* ===== ТОП (обновлённый) ===== */
+.top-section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.top-list {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 6px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.top-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.top-item:last-child {
+    border-bottom: none;
+}
+
+.top-item.gold .top-place {
+    color: #fbbf24;
+}
+
+.top-item.silver .top-place {
+    color: #9ca3af;
+}
+
+.top-item.bronze .top-place {
+    color: #d97706;
+}
+
+.top-place {
+    font-weight: 700;
+    min-width: 50px;
+}
+
+.top-name {
+    flex: 1;
+    margin-left: 8px;
+}
+
+.top-nft {
+    color: #a78bfa;
+    font-weight: 600;
+}
