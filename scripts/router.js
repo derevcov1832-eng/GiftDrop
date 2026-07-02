@@ -113,10 +113,22 @@ const pages = {
             </div>
         </div>
 
-        <div class="balance-card" style="margin-top: 16px;">
+        <div style="margin-top: 12px;">
+            <button class="bonus-btn" onclick="startCoinGame()" style="background: linear-gradient(135deg, #fbbf24, #f59e0b);">
+                🪙 Монетка
+            </button>
+        </div>
+
+        <div style="margin-top: 12px;">
+            <button class="bonus-btn" onclick="startCasesGame()" style="background: linear-gradient(135deg, #f472b6, #ec4899);">
+                🎁 Кейсы
+            </button>
+        </div>
+
+        <div class="balance-card">
             <div class="label">💰 Баланс NFT</div>
-            <div class="amount">12</div>
-            <button class="bonus-btn" onclick="alert('🎁 Получен ежедневный бонус! +2 NFT')" style="margin-top: 12px;">
+            <div class="amount" id="homeBalance">12</div>
+            <button class="bonus-btn" onclick="alert('🎁 Получен ежедневный бонус! +2 NFT')">
                 🎁 Ежедневный бонус
             </button>
         </div>
@@ -227,3 +239,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// ===== ДЕЛАЕМ ФУНКЦИИ ГЛОБАЛЬНЫМИ =====
+window.loadPage = loadPage;
+window.startCoinGame = startCoinGame;
+window.startCasesGame = startCasesGame;
+window.goHome = goHome;
