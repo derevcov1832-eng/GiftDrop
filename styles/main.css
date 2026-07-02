@@ -144,9 +144,18 @@ body {
 }
 
 .case-icon {
-    font-size: 44px;
     margin-bottom: 10px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    color: #a78bfa;
+}
+
+.case-card.rare .case-icon {
+    color: #fbbf24;
+}
+
+.case-card.legendary .case-icon {
+    color: #f472b6;
 }
 
 .case-name {
@@ -196,26 +205,19 @@ body {
     color: rgba(255, 255, 255, 0.8);
     font-size: 14px;
     font-weight: 500;
-    display: flex;
-    justify-content: space-between;
 }
 
 .top-item:last-child {
     border-bottom: none;
 }
 
-.top-item span {
-    color: rgba(255, 255, 255, 0.4);
-    font-weight: 400;
-}
-
 /* ===== НИЖНЯЯ НАВИГАЦИЯ ===== */
 #navbar {
     display: flex;
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(15, 15, 30, 0.85);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     position: fixed;
     bottom: 12px;
     left: 12px;
@@ -226,7 +228,6 @@ body {
     justify-content: space-around;
     z-index: 100;
     border-radius: 30px;
-    background: rgba(15, 15, 30, 0.85);
 }
 
 .nav-item {
@@ -246,8 +247,12 @@ body {
 }
 
 .nav-item .nav-icon {
-    font-size: 22px;
     margin-bottom: 2px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.nav-item.active .nav-icon {
+    color: #a78bfa;
 }
 
 .nav-item .nav-label {
