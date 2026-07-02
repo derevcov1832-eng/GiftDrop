@@ -113,15 +113,9 @@ const pages = {
             </div>
         </div>
 
-        <div style="margin-top: 12px;">
+        <div style="margin-top: 16px;">
             <button class="bonus-btn" onclick="startCoinGame()" style="background: linear-gradient(135deg, #fbbf24, #f59e0b);">
-                🪙 Монетка
-            </button>
-        </div>
-
-        <div style="margin-top: 12px;">
-            <button class="bonus-btn" onclick="startCasesGame()" style="background: linear-gradient(135deg, #f472b6, #ec4899);">
-                🎁 Кейсы
+                🪙 Играть в Монетку
             </button>
         </div>
 
@@ -239,9 +233,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-// ===== ДЕЛАЕМ ФУНКЦИИ ГЛОБАЛЬНЫМИ =====
-window.loadPage = loadPage;
-window.startCoinGame = startCoinGame;
-window.startCasesGame = startCasesGame;
-window.goHome = goHome;
