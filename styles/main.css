@@ -200,92 +200,6 @@ body {
 }
 
 .top-item {
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.top-item:last-child {
-    border-bottom: none;
-}
-
-/* ===== НИЖНЯЯ НАВИГАЦИЯ ===== */
-#navbar {
-    display: flex;
-    background: rgba(15, 15, 30, 0.85);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    position: fixed;
-    bottom: 12px;
-    left: 12px;
-    right: 12px;
-    max-width: 406px;
-    margin: 0 auto;
-    padding: 6px 8px;
-    justify-content: space-around;
-    z-index: 100;
-    border-radius: 30px;
-}
-
-.nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    padding: 8px 16px;
-    transition: all 0.3s ease;
-    opacity: 0.4;
-    border-radius: 20px;
-}
-
-.nav-item.active {
-    opacity: 1;
-    background: rgba(167, 139, 250, 0.12);
-}
-
-.nav-item .nav-icon {
-    margin-bottom: 2px;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.nav-item.active .nav-icon {
-    color: #a78bfa;
-}
-
-.nav-item .nav-label {
-    font-size: 10px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.6);
-    letter-spacing: 0.3px;
-}
-
-.nav-item.active .nav-label {
-    color: #a78bfa;
-}
-
-.nav-item:hover {
-    opacity: 0.8;
-}
-/* ===== ТОП (обновлённый) ===== */
-.top-section h2 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 14px;
-}
-
-.top-list {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 16px;
-    padding: 6px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.top-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -326,6 +240,130 @@ body {
     color: #a78bfa;
     font-weight: 600;
 }
+
+/* ===== БАЛАНС ===== */
+.balance-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    margin-top: 16px;
+}
+
+.balance-card .amount {
+    font-size: 36px;
+    font-weight: 700;
+    color: #a78bfa;
+}
+
+.balance-card .label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.bonus-btn {
+    background: linear-gradient(135deg, #a78bfa, #7c3aed);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    margin-top: 12px;
+}
+
+.bonus-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 40px rgba(167, 139, 250, 0.3);
+}
+
+/* ===== ПРОФИЛЬ ===== */
+.profile-header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.profile-header .avatar {
+    font-size: 72px;
+    margin-bottom: 10px;
+    color: #a78bfa;
+}
+
+.profile-header .name {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.profile-header .nick {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    padding: 16px;
+    margin: 16px 0;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.stats .stat {
+    text-align: center;
+}
+
+.stats .stat .number {
+    font-size: 22px;
+    font-weight: 700;
+    color: #a78bfa;
+}
+
+.stats .stat .label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.nft-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.nft-item {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    flex: 1 0 calc(33% - 10px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nft-item .nft-icon {
+    font-size: 32px;
+}
+
+.nft-item .nft-name {
+    font-size: 12px;
+    margin-top: 4px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.nft-item.rare {
+    border-color: rgba(251, 191, 36, 0.3);
+}
+
+.nft-item.legendary {
+    border-color: rgba(244, 114, 182, 0.3);
+}
+
 /* ===== ИГРЫ ===== */
 .game-container {
     padding: 10px 0;
@@ -488,4 +526,63 @@ body {
     border-radius: 14px;
     border: 1px solid rgba(255, 255, 255, 0.06);
     color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== НИЖНЯЯ НАВИГАЦИЯ ===== */
+#navbar {
+    display: flex;
+    background: rgba(15, 15, 30, 0.85);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    position: fixed;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    max-width: 406px;
+    margin: 0 auto;
+    padding: 6px 8px;
+    justify-content: space-around;
+    z-index: 100;
+    border-radius: 30px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    opacity: 0.4;
+    border-radius: 20px;
+}
+
+.nav-item.active {
+    opacity: 1;
+    background: rgba(167, 139, 250, 0.12);
+}
+
+.nav-item .nav-icon {
+    margin-bottom: 2px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.nav-item.active .nav-icon {
+    color: #a78bfa;
+}
+
+.nav-item .nav-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.3px;
+}
+
+.nav-item.active .nav-label {
+    color: #a78bfa;
+}
+
+.nav-item:hover {
+    opacity: 0.8;
 }
